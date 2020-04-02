@@ -24,7 +24,7 @@ module.exports.sendRPA = async function sendRPA(message) {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${process.env.RPA_TOKEN}`,
-        'X-UIPATH-TenantName': `${process.env.RPA_TENANTNAME}`
+        'X-UIPATH-TenantName': `${process.env.RPA_TENANT_NAME}`
       }
     }).then(res => {
       resolve(true);
