@@ -20,7 +20,7 @@ module.exports.sendRPA = async function sendRPA(message) {
   };
 
   return new Promise(function (resolve, reject) {
-    axios.post(process.env.RPA_URL, jsonData, {
+    axios.post(`https://platform.uipath.com/${process.env.RPA_ACCOUNT_NAME}/${process.env.RPA_TENANT_NAME}/odata/Jobs/UiPath.Server.Configuration.OData.StartJobs`, jsonData, {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${process.env.RPA_TOKEN}`,
